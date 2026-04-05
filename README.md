@@ -47,6 +47,8 @@ I created a simulated device:
 <img width="959" height="431" alt="Modbus-setup" src="https://github.com/user-attachments/assets/7465db2c-686d-4e2a-becc-2cda10235985" />
 
 
+<img width="302" height="311" alt="Configure-plc1" src="https://github.com/user-attachments/assets/9a0eb4c2-0d46-482e-b8a0-a16aac18fbb6" />
+
 ---
 
 ## Client Connection (QModMaster)

@@ -44,7 +44,8 @@ I created a simulated device:
   - Holding Registers
   - Coils
 
-![ModbusPal Setup](images/modbuspal-setup.png)
+<img width="959" height="431" alt="Modbus-setup" src="https://github.com/user-attachments/assets/7465db2c-686d-4e2a-becc-2cda10235985" />
+
 
 ---
 
@@ -55,7 +56,8 @@ Connected to the local Modbus server:
 - Host: 127.0.0.1  
 - Port: 1502  
 
-![QModMaster Connected](images/qmodmaster-connected.png)
+<img width="417" height="321" alt="QModMaster-connected" src="https://github.com/user-attachments/assets/1011bc82-f630-49ff-94ab-e23fe664c84d" />
+
 
 ---
 
@@ -75,7 +77,8 @@ Connected to the local Modbus server:
 - Register: 0  
 - Value: 65535  
 
-![QModMaster Write](images/qmodmaster-write.png)
+<img width="412" height="317" alt="QModMaster-write06" src="https://github.com/user-attachments/assets/e26cf5c5-8b00-420b-836b-8b4ca8e56da4" />
+
 
 ---
 
@@ -85,7 +88,8 @@ Captured traffic using loopback interface with filter:
 
 
 
-![Wireshark Capture](images/wireshark-capture.png)
+<img width="956" height="560" alt="Wireshark-capture" src="https://github.com/user-attachments/assets/635b106e-e549-4c4a-9800-89fe1ca446d9" />
+
 
 ---
 
@@ -97,7 +101,8 @@ The most important observation was a write operation modifying a register:
 - Register Number: 0  
 - Value: 65535  
 
-![Wireshark FC6](images/wireshark-fc6.png)
+<img width="959" height="563" alt="Wireshark-fc6" src="https://github.com/user-attachments/assets/f016e1ed-49fb-4da5-9158-a6764a5091a7" />
+
 
 ---
 

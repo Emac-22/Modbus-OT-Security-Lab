@@ -170,7 +170,7 @@ Modbus does not include built-in security, so analysis depends heavily on contex
 
 In Modbus environments, **no single action is inherently malicious**.
 
-A write operation, for example, is not automatically suspicious — it becomes a concern when combined with unusual context, such as:
+A write operation, for example, is not automatically suspicious. It becomes a concern when combined with unusual context, such as:
 
 - An unknown source  
 - Abnormal timing  

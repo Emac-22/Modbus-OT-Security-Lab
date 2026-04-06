@@ -73,7 +73,7 @@ Connected to the local Modbus server:
 
 ---
 
-### Write Operation (Suspicious Behavior)
+### Write Operation (higher risk, context-dependent)
 
 - Function Code: 6 (Write Single Register)
 - Register: 0  

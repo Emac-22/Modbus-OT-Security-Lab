@@ -122,6 +122,65 @@ Since Modbus does not verify the source of commands, any device with network acc
 
 ---
 
+## 🔍 Normal vs Suspicious Modbus Traffic Indicators
+
+Understanding the difference between normal operational traffic and potentially suspicious behavior is critical in OT environments.  
+Modbus does not include built-in security, so analysis depends heavily on context and established baselines.
+
+---
+
+### 📊 Quick Comparison
+
+| Category | Normal Behavior | Suspicious Behavior |
+|---------|----------------|--------------------|
+| Source | Known HMI, SCADA, or engineering workstation | Unknown or unauthorized IP/device |
+| Function Codes | Primarily read functions (01, 02, 03, 04) | Unexpected use of write functions (05, 06, 16) |
+| Frequency | Consistent, predictable polling intervals | Rapid bursts or irregular spikes in traffic |
+| Writes | Infrequent and tied to operations | High-frequency or repeated write activity |
+| Values | Expected ranges based on system design | Extreme or unsafe values (e.g., 65535) |
+| Timing | During normal operations or scheduled tasks | Odd hours with no known maintenance window |
+| Behavior | Stable and repeatable patterns | New or abnormal communication patterns |
+| Coils/States | Controlled and intentional changes | Rapid ON/OFF toggling or erratic behavior |
+
+---
+
+### ✅ Normal (Expected OT Behavior)
+
+- Consistent polling from HMI/SCADA systems (e.g., Function Code 03 - Read Holding Registers)
+- Traffic originating from known and trusted devices
+- Predictable communication intervals (e.g., every 2–5 seconds)
+- Occasional write operations tied to legitimate control actions
+- Access to expected register or coil ranges based on system configuration
+
+---
+
+### 🚨 Suspicious (Potential Security Concern)
+
+- Communication from unknown or unauthorized devices
+- Excessive or rapid write operations within short timeframes
+- Use of write function codes by systems that typically only read data
+- Values written outside of normal operational thresholds
+- Activity occurring outside of expected operational hours
+- Repeated toggling of coils or rapid state changes
+- Deviations from established baseline behavior
+
+---
+
+### 🧠 Key Takeaway
+
+In Modbus environments, **no single action is inherently malicious**.
+
+A write operation, for example, is not automatically suspicious — it becomes a concern when combined with unusual context, such as:
+
+- An unknown source  
+- Abnormal timing  
+- High frequency  
+- Unsafe or unexpected values  
+
+Effective OT security monitoring depends on establishing a **baseline of normal behavior** and identifying deviations from that baseline.
+
+---
+
 ## Security Risks
 
 - No authentication  
